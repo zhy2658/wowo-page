@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <my-button></my-button> -->
-        <AnimalWatch3></AnimalWatch3>
+        <Account></Account>
     </div>
 </template>
 
@@ -11,6 +11,7 @@ import Car from './components/Car.vue'
 import Goods from './components/Goods.vue'
 import AnimalWatch2 from './components/AnimalWatch2.vue'
 import AnimalWatch3 from './components/AnimalWatch3.vue'
+import Account from './components/Account.vue'
 export default {
     name: 'MyApp',
     components: {
@@ -18,7 +19,8 @@ export default {
         person,
         Goods,
         AnimalWatch2,
-        AnimalWatch3
+        AnimalWatch3,
+        Account
     }
 }
 </script>
@@ -26,16 +28,13 @@ export default {
 <style>
 .demo-box {
     width: 800px;
-    /* height: 200px; */
     border-radius: 10px;
     border: 1px solid rgb(231, 120, 153);
     margin: 0 auto;
-    /* display: flex; */
-    /* justify-content: center; */
     padding: 20px 20px;
     box-shadow: 0 0 10px 2px rgb(245, 184, 201);
 
-    p {
+    /* p {
         line-height: 25px;
         span {
             color: rgb(209, 35, 87);
@@ -57,6 +56,6 @@ export default {
     }
     button:active {
         background-color: #154674;
-    }
+    } */
 }
 </style>
