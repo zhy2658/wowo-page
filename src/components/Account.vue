@@ -61,12 +61,8 @@ const onSubmit = () => {
     console.log('submit!')
 }
 
-axios.post('https://api.w0w0.one/msg').then((res) => {
-    const { success, results } = res.data
-    if (success) {
-        tableData.value = results
-    }
-    console.log(tableData, results)
+axios.post('https://api.w0w0.one/account/list').then((res) => {
+    tableData.value = res.data
 })
 </script>
 <style scoped></style>
