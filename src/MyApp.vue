@@ -26,17 +26,24 @@ export default {
 </script>
 
 <style>
+body {
+    /* background-color: #292a37;
+    p,
+    div {
+        color: #fff;
+    } */
+}
 .demo-box {
-    width: 800px;
-    border-radius: 10px;
-    border: 1px solid rgb(231, 120, 153);
-    margin: 0 auto;
+    /* width: 800px; */
+    /* border-radius: 10px; */
+    /* border: 1px solid rgb(231, 120, 153); */
+    /* margin: 0 auto; */
     padding: 20px 20px;
-    box-shadow: 0 0 10px 2px rgb(245, 184, 201);
+    /* box-shadow: 0 0 10px 2px rgb(245, 184, 201); */
 
     /* p {
         line-height: 25px;
-        span {
+        span {A212
             color: rgb(209, 35, 87);
             font-weight: bold;
         }

@@ -1,16 +1,10 @@
 <template>
     <div class="demo-box">
-        <div class="flex gap-2">
-            <p>
-                <el-tag type="primary">UID:{{ user.uid }}</el-tag>
-            </p>
-            <p>
-                <el-tag type="success">用户:{{ user.name }}</el-tag>
-            </p>
-            <p>
-                <el-tag type="info">密码: {{ user.password }}</el-tag>
-            </p>
-        </div>
+        <el-table :data="tableData" style="width: 100%">
+            <el-table-column prop="id" label="id" width="180" />
+            <el-table-column prop="platform" label="platform" width="180" />
+            <el-table-column prop="login_name" label="login_name" />
+        </el-table>
         <h1>增加账号</h1>
         <el-form :model="form" label-width="auto" style="max-width: 600px">
             <el-form-item label="平台">
@@ -44,14 +38,15 @@
 </template>
 <script setup lang="ts">
 import { ref, reactive, watch, toRef, toRefs } from 'vue'
-import { Calendar, Search } from '@element-plus/icons-vue'
-
 import axios from 'axios'
-const user = ref({
-    name: null,
-    password: null,
-    uid: null
-})
+
+let tableData = ref([
+    {
+        id: '-1',
+        platform: 'WoWo',
+        login_name: 'WoWo'
+    }
+])
 
 const form = reactive({
     platform: '',
@@ -66,10 +61,12 @@ const onSubmit = () => {
     console.log('submit!')
 }
 
-axios.post('https://api.w0w0.one/msg', { token: '111' }).then((res) => {
-    if (res.data) {
-        user.value = res.data
+axios.post('https://api.w0w0.one/msg').then((res) => {
+    const { success, results } = res.data
+    if (success) {
+        tableData.value = results
     }
+    console.log(tableData, results)
 })
 </script>
 <style scoped></style>
