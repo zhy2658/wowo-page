@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-box">
+  <div>
     <el-row :gutter="10">
       <el-col :sm="6">
         <div class="grid-ctet grid-1">在！ 喵！ (立刻回复) wowo 又来啦！</div>
@@ -112,6 +112,24 @@
     tableData.value = res.data
   })
 </script>
-<style scoped>
-  @import './style.scss';
+<style scoped lang="scss">
+  .grid-ctet {
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    min-height: 36px;
+
+    @include box-shadow(4px, #c71651c5);
+    padding: $text-padding;
+    h1 {
+      padding: $text-padding;
+    }
+  }
+
+  .grid-2 {
+    height: 200px;
+  }
+  .form-type :deep(.el-select__wrapper) {
+    height: 70px !important;
+  }
 </style>
