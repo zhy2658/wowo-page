@@ -1,11 +1,16 @@
 <template>
   <div class="g-container">
-    <h1>Hello Home!</h1>
+    <h1 style="text-align: Center">Hello Home!</h1>
 
     <el-row>
       <el-col :span="24">
-        <el-button type="primary">
-          <router-link to="/account/list">账户列表</router-link>
+        <el-button type="primary" style="margin: 0 auto; display: block; width: 50%; height: 50px">
+          <router-link
+            to="/account/list"
+            style="text-decoration: none; color: #232323; font-size: 1.5rem"
+          >
+            账户列表
+          </router-link>
         </el-button>
       </el-col>
     </el-row>
