@@ -25,7 +25,7 @@
   </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref, onMounted, onUnmounted } from 'vue'
 
   const isMenuOpen = ref(false)
@@ -34,9 +34,9 @@
     isMenuOpen.value = !isMenuOpen.value
   }
 
-  const closeMenuOnClickOutside = event => {
-    const nav = document.querySelector('.navbar')
-    const hamburger = document.querySelector('.hamburger')
+  const closeMenuOnClickOutside = (event: any) => {
+    const nav: any = document.querySelector('.navbar')
+    const hamburger: any = document.querySelector('.hamburger')
     if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
       isMenuOpen.value = false
     }
